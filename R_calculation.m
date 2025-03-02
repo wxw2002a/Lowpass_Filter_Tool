@@ -24,7 +24,7 @@ function R = R_calculation(n, y, x, p, T, h)
     end
     
     % Compute s1: using (h*T/2) and the exponential factor exp(n*h/T).
-    s1 = (h * T / 2) * (abs(x(n) - y)^(p - 1)) * sign(x(n) - y) * exp(n * h / T);
+    s1 = (h  / (2* T)) * (abs(x(n) - y)^(p - 1)) * sign(x(n) - y) * exp(n * h / T);
     
     % Compute s2: sum contributions of the first n-1 samples with exponential weighting.
     s2 = 0;
